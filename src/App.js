@@ -9,10 +9,11 @@ function App(props) {
   let mainComponent = "";
   switch(props.location) {
     case "": 
-    mainComponent = <Main />;
+    mainComponent = <Main {...props}/>;
+    break;
     case "callback":
-      mainComponent = <Callback />;
-      break;
+        mainComponent = <Callback />;
+        break;
     case "secret":
       mainComponent = <Secret />;
       break;
@@ -22,9 +23,6 @@ function App(props) {
   }
   return (
     <div className="App">
-      <header>
-        <h1>Welcome {props.name} </h1>
-      </header>
       {mainComponent}
     </div>
   );
