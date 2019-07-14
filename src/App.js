@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <header>
-        <h1>Welcome to OAUTH</h1>
+        <h1>Welcome {props.name} </h1>
       </header>
     </div>
   );

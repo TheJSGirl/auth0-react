@@ -11,7 +11,7 @@ window.setState = (changes) => {
 }
 
 let initialState = {
-    "name": "Priyanka"
+    name: "Priyanka"
 }
 
 window.setState(initialState)
