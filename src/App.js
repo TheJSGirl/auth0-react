@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Main from './components/main/main';
 
 function App(props) {
   return (
@@ -7,6 +8,7 @@ function App(props) {
       <header>
         <h1>Welcome {props.name} </h1>
       </header>
+      <Main />
     </div>
   );
 }
