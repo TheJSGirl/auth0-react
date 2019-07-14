@@ -7,7 +7,11 @@ class Main extends Component {
             <div>
                 <h1>Welcome {this.props.name}</h1>
                 <p>Please click on Login button to continue</p>
-                <a href="/secret">Login</a>
+                <a href="/secret">To see secret area do login</a>
+                <div>
+                    Please Login first
+                    <button onClick={this.props.auth.login}>Login</button>
+                </div>
             </div>
         )
     }

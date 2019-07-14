@@ -6,6 +6,7 @@ class Callback extends Component {
         return(
             <div>
                 Loading...
+                <h2>Hello to Callback Page</h2>
             </div>
         )
     }
