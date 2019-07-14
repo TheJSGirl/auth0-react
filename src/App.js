@@ -2,23 +2,30 @@ import React from 'react';
 import './App.css';
 import Main from './components/main';
 import Secret from './components/secret';
+import NotFound from './components/NotFound';
+import Callback from './components/Callback';
 
 function App(props) {
   let mainComponent = "";
-  switch(this.props.location) {
+  switch(props.location) {
     case "": 
     mainComponent = <Main />;
+    case "callback":
+      mainComponent = <Callback />;
+      break;
     case "secret":
       mainComponent = <Secret />;
+      break;
+
     default:
-      mainComponent = <Main />
+      mainComponent = <NotFound />;
   }
   return (
     <div className="App">
       <header>
         <h1>Welcome {props.name} </h1>
       </header>
-      <Main />
+      {mainComponent}
     </div>
   );
 }
