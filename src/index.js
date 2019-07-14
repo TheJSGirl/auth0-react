@@ -10,8 +10,11 @@ window.setState = (changes) => {
     ReactDOM.render(<App {...state}/>, document.getElementById('root'));
 }
 
+let location = location.pathname.replace(/^\/?|\/$/g, "" );
+
 let initialState = {
-    name: "Priyanka"
+    name: "Priyanka",
+    location
 }
 
 window.setState(initialState)

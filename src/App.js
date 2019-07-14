@@ -3,6 +3,12 @@ import './App.css';
 import Main from './components/main/main';
 
 function App(props) {
+  let mainComponent = "";
+  switch(this.props.location) {
+    case "": 
+    mainComponent = <Main />;
+     
+  }
   return (
     <div className="App">
       <header>
