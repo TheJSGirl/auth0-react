@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
+import Auth0 from '../../Auth';
 
 class Callback extends Component {
+
+    componentDidMount() {
+        const auth = new Auth0();
+        auth.handleAuthentication();
+        
+    }
 
     render(){
         return(

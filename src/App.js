@@ -15,7 +15,7 @@ function App(props) {
         mainComponent = <Callback />;
         break;
     case "secret":
-      mainComponent = <Secret />;
+      mainComponent = props.auth.isAuthenticate() ? <Secret />: <NotFound />;
       break;
 
     default:
